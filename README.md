@@ -38,7 +38,8 @@ pip install -r requirements.txt
 ```
 
 # Start the server
+```bash
 uvicorn main:app --reload
-
+```
 # Visit your API documentation at:
 👉 http://localhost:8000/docs
