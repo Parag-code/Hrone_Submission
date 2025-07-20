@@ -41,5 +41,49 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
-# Visit your API documentation at:
-👉 http://localhost:8000/docs
+
+## 📡 API Endpoints
+
+### 🔹 Product Routes
+
+#### `POST /products`  
+Create a new product  
+**Request Body (JSON):**
+```json
+{
+  "name": "Laptop",
+  "price": 49999,
+  "category": "Electronics"
+}
+```
+GET /products
+Get list of products with optional query parameters:
+
+- name (string)
+
+- min_price (integer)
+
+- max_price (integer)
+
+- category (string)
+
+Example:
+
+``` bash
+/products?category=Electronics&min_price=10000&max_price=60000
+```
+🔹 Order Routes
+  POST /orders
+  Create a new order
+  Request Body (JSON):
+  ```bash 
+{
+  "user_id": "u123",
+  "product_ids": ["64a1e123...", "64a1e456..."]
+}
+```
+GET /orders/{user_id}
+Get all orders placed by a specific user.
+```bash
+/orders/u123
+```
