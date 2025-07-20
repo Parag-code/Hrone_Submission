@@ -87,3 +87,14 @@ Get all orders placed by a specific user.
 ```bash
 /orders/u123
 ```
+
+📁 Project Structure
+``` bash
+├── main.py           # FastAPI entry point
+├── config.py         # MongoDB URI & DB config
+├── models.py         # Pydantic models for validation
+├── crud.py           # DB interaction logic
+├── requirements.txt  # Required packages
+└── README.md       
+
+```
